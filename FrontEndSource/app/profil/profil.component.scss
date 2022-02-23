@@ -1,0 +1,63 @@
+.button {
+    background-color: rgb(218, 189, 157);
+    border: none;
+    color: rgb(240, 229, 216);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    left: 100px;
+    height:60px;
+    width:120px;
+    font-size: 25px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(219, 189, 150);
+}
+.container{
+    display: grid;
+    margin: 30px auto 32px;
+    grid-template-columns: 210px 550px;
+    align-self: left;
+}
+.pozaProfil{
+    background-color: rgb(199, 174, 146);
+    height: 400px;
+    width:200px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.informatiiUser{
+    background-color: rgb(238, 209, 190);
+    font-size: 30px;
+    width: 500px;
+    height:400px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(219, 190, 153);
+}
+.gridComponent{
+    margin-bottom: 0px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(219, 190, 153);
+    height:80px;
+    padding: 20px 20px 20px 20px;
+}
+.numeUser{
+    background-color: rgb(238, 209, 190);
+    font-size: 30px;
+    width: 494px;
+    height:100px;
+    padding-left: 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(219, 190, 153);
+    margin-bottom: 0px;
+}
+.pozaProf{
+    margin-left: 5px;
+    margin-top: 5px;
+}

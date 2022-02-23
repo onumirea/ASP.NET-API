@@ -1,0 +1,29 @@
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\appsettings.Development.json
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\appsettings.json
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Proiect O+A.exe
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Proiect O+A.deps.json
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Proiect O+A.runtimeconfig.json
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Proiect O+A.runtimeconfig.dev.json
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Proiect O+A.dll
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\ref\Proiect O+A.dll
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Proiect O+A.pdb
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Facultate\ASP\Proiect O+A\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.csproj.AssemblyReference.cache
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.AssemblyInfoInputs.cache
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.AssemblyInfo.cs
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.csproj.CoreCompileInputs.cache
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.MvcApplicationPartsAssemblyInfo.cs
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.MvcApplicationPartsAssemblyInfo.cache
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\staticwebassets\Proiect O+A.StaticWebAssets.Manifest.cache
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\staticwebassets\Proiect O+A.StaticWebAssets.xml
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\scopedcss\bundle\Proiect O+A.styles.css
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.RazorTargetAssemblyInfo.cache
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.csproj.CopyComplete
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.dll
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\ref\Proiect O+A.dll
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.pdb
+D:\Facultate\ASP\Proiect O+A\obj\Debug\net5.0\Proiect O+A.genruntimeconfig.cache

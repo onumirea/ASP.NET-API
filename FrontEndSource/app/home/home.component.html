@@ -1,0 +1,243 @@
+
+<button class = "button1" onClick="document.getElementById('formular').scrollIntoView()"> Posteaza o reteta! <img src = "assets/img/arrowDown.png" height = 15px width = 15px> </button>
+<div class="content" role="main">
+    <ul *ngFor = "let i of listaRetete">
+        <app-reteta [ret] = "i" ></app-reteta>
+    </ul>
+</div>
+
+<div class = "container" id = 'formular'>
+    <h1>Posteaza o reteta!</h1>
+<form
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="nume">Numele Retetei</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nume"
+            [(ngModel)]="form.nume"
+            required
+            #nume="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="nume.errors && f.submitted"
+          >
+            Nu poti posta o reteta fara nume!
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="grad_dificultate">Gradul de Dificultate</label>
+            <input
+                type="text"
+                class="form-control"
+                name="grad_dificultate"
+                [(ngModel)]="form.grad_dificultate"
+                required
+                #grad_dificultate="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="grad_dificultate.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara grad de dificultate!
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="durata_minute">Durata in Minute</label>
+            <input
+                type="number"
+                class="form-control"
+                name="durata_minute"
+                [(ngModel)]="form.durata_minute"
+                required
+                #durata_minute="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="durata_minute.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa specifici durata!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="numar_portii">Numarul de portii</label>
+            <input
+                type="number"
+                class="form-control"
+                name="numar_portii"
+                [(ngModel)]="form.numar_portii"
+                required
+                #numar_portii="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="numar_portii.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa specifici numarul de portii!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="categorie">Categorie</label>
+            <input
+                type="text"
+                class="form-control"
+                name="categorie"
+                [(ngModel)]="form.categorie"
+                required
+                #categorie="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="categorie.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa ii specifici categoria!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="bucatarie">Bucatarie</label>
+            <input
+                type="text"
+                class="form-control"
+                name="bucatarie"
+                [(ngModel)]="form.bucatarie"
+                required
+                #bucatarie="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="bucatarie.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa ii specifici bucataria!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="mod_preparare">Modul de preparare</label>
+            <input
+                type="text"
+                class="form-control"
+                name="mod_preparare"
+                [(ngModel)]="form.mod_preparare"
+                required
+                #mod_preparare="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="mod_preparare.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa ii specifici modul de preparare!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="autorId">Id-ul autorului</label>
+            <input
+                type="number"
+                class="form-control"
+                name="autorId"
+                [(ngModel)]="form.autorId"
+                required
+                #autorId="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="autorId.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa ii specifici id-ul autorului(Il poti vedea in pagina de autori)!
+            </div>
+        </div>
+        <br>Informatii nutritionale:<br><br>
+        <div class="form-group">
+            <label for="calorii">Calorii</label>
+            <input
+                type="number"
+                class="form-control"
+                name="calorii"
+                [(ngModel)]="form.calorii"
+                required
+                #calorii="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="calorii.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa ii specifici caloriile
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="glucide">Glucide</label>
+            <input
+                type="number"
+                class="form-control"
+                name="glucide"
+                [(ngModel)]="form.glucide"
+                required
+                #glucide="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="glucide.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa ii specifici glucidele
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="proteine">Proteine</label>
+            <input
+                type="number"
+                class="form-control"
+                name="proteine"
+                [(ngModel)]="form.proteine"
+                required
+                #proteine="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="proteine.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa ii specifici proteinele
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="grasimi">Grasimi</label>
+            <input
+                type="number"
+                class="form-control"
+                name="grasimi"
+                [(ngModel)]="form.grasimi"
+                required
+                #grasimi="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="grasimi.errors && f.submitted"
+            >
+                Nu poti posta o reteta fara sa ii specifici grasimile
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <button class="button">Submit</button>
+        </div>
+      </form>
+</div>

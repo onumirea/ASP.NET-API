@@ -1,0 +1,49 @@
+
+  .content {
+    margin: 30px auto 32px;
+    padding: 0 16px;
+    width: 90%;
+    display: grid;
+    float:left;
+    align-self: left;
+  }
+
+  .ingredient{
+    width:500px;
+    height: 300px;
+    border-radius: 10px; 
+    padding: 30px;
+    background-image: url("/assets/img/textil4.jpeg");
+    border-style: solid;
+    border-width: 5px;
+    border-color:rgb(180, 153, 128);
+  }
+
+
+  h2{
+    font-size: 20px;
+    margin: 0 100px;
+  }
+  h1{
+    font-size: 35px;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(68, 38, 13);
+  }
+  .btn btn-outline-primary{
+      background-color: brown;;
+  }
+  .button {
+    background-color: #8f705b;
+    border: none;
+    color: rgb(240, 229, 216);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    float: right;
+    
+  
+  }

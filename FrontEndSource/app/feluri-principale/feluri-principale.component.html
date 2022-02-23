@@ -1,0 +1,7 @@
+<div class="content" role="main">
+    <ul *ngFor = "let i of listaRetete">
+        <div *ngIf="i.reteta.categorie=='FelPrincipal'">
+        <app-reteta [ret] = "i" ></app-reteta>
+        </div>
+    </ul>
+</div>

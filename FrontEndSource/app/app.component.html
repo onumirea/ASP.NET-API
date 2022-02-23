@@ -1,0 +1,70 @@
+
+
+<!-- Toolbar -->
+
+<div class="toolbar" role="banner">
+  <img src = "assets/img/logoo.png" height = 40px width = 40px> 
+  <div class = "ToolbarName"> OAmila Cuisine</div>
+  <a href="/profil">
+    <img src = "assets/img/profil.png" class = "gotoprofil"height = 40px width = 40px> 
+  </a>
+</div>
+
+
+<div class="header">
+  <div class="dropdown">
+    <button class="button2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Cautare
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" routerLink="/magazine">Magazine</a></li>
+      <li><a class="dropdown-item" routerLink="/ingrediente">Ingrediente</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="button2" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+      Inregistrare/Autentificare
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+      <li><a class="dropdown-item" routerLink="/register">Inregistrare</a></li>
+      <li><a class="dropdown-item" routerLink="/login">Autentificare</a></li>
+    </ul>
+  </div>
+  
+  <div class = "nume" > 
+    OAmila Cuisine
+  </div>
+  
+</div>
+
+<div class="content" role="main">
+
+
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="button" routerLink="/aperitive" routerLinkActive="coloredlink">Aperitive</a>
+    </li>
+    <li class="nav-item">
+      <a class="button" routerLink="/feluri-principale" routerLinkActive="coloredlink">Feluri principale</a>
+    </li>
+    <li class="nav-item">
+      <a class="button" routerLink="/home" routerLinkActive="coloredlink">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="button" routerLink="/deserturi" routerLinkActive="coloredlink">Deserturi</a>
+    </li>
+    <li class="nav-item">
+      <a class="button" routerLink="/ciorbe" routerLinkActive="coloredlink">Ciorbe</a>
+    </li>
+    
+
+    <div class = "logo">
+    </div>
+
+  </ul>
+  
+</div>
+
+
+<router-outlet></router-outlet>

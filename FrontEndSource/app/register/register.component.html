@@ -1,0 +1,105 @@
+<div class="col-md-12">
+    <div class="card card-container">
+      <h1 > Înregistrează-te!</h1>
+      <form class = "formcontainer"
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="nume">Nume</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nume"
+            [(ngModel)]="form.nume"
+            required
+            minlength="3"
+            maxlength="20"
+            #nume="ngModel"
+          />
+          <div class="alert-danger" *ngIf="nume.errors && f.submitted">
+            <div *ngIf="nume.errors['required']">Ai nevoie de un nume!</div>
+            <div *ngIf="nume.errors['minlength']">
+              Numele trebuie sa aibă cel putin 3 caractere!
+            </div>
+            <div *ngIf="nume.errors['maxlength']">
+              Numele trebuie sa aibă cel mult 20 de caractere!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="prenume">Prenume</label>
+          <input
+            type="text"
+            class="form-control"
+            name="prenume"
+            [(ngModel)]="form.prenume"
+            required
+            minlength="3"
+            maxlength="20"
+            #prenume="ngModel"
+          />
+          <div class="alert-danger" *ngIf="prenume.errors && f.submitted">
+            <div *ngIf="prenume.errors['required']">Ai nevoie de un prenume!</div>
+            <div *ngIf="prenume.errors['minlength']">
+              Prenumele trebuie sa aibă cel putin 3 caractere!
+            </div>
+            <div *ngIf="prenume.errors['maxlength']">
+              Prenumele trebuie sa aibă cel mult 20 de caractere!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="form.email"
+            required
+            email
+            #email="ngModel"
+          />
+          <div class="alert-danger" *ngIf="email.errors && f.submitted">
+            <div *ngIf="email.errors['required']">Ai nevoie de un email!</div>
+            <div *ngIf="email.errors['email']">
+              Adresa de email trebuie sa fie validă!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Parolă</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            [(ngModel)]="form.password"
+            required
+            minlength="6"
+            #password="ngModel"
+          />
+          <div class="alert-danger" *ngIf="password.errors && f.submitted">
+            <div *ngIf="password.errors['required']">Ai nevoie de o parolă!</div>
+            <div *ngIf="password.errors['minlength']">
+              Parola trebuie sa aiba cel putin 6 caractere
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="button">Înregistrare</button>
+        </div>
+  
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          Înregistrarea a eșuat!<br />{{ errorMessage }}
+        </div>
+      </form>
+  
+      <div class="alert alert-success" *ngIf="isSuccessful">
+        Înregistrarea a avut succes!
+        Pentru a primi acces la postarea retetelor sau ingredientelor contactati Administratorul la mail-ul: admin@oamila.ro
+      </div>
+    </div>
+  </div>

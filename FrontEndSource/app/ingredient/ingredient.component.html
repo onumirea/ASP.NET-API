@@ -1,0 +1,20 @@
+<div class = content>
+    <h1 class = "ingredient">
+        <br>
+        {{ingr.ingredient.nume}}
+        <h2>
+        <p> 
+        Categorie: 
+        {{ingr.ingredient.categorie}}
+        </p> 
+        <p> 
+        Unitate de Masura: 
+        <div *ngIf = "">
+
+        </div>
+        {{ingr.ingredient.unitate_Masura}}
+
+        </h2>
+        <button class = "button" (click)="goToIngredientPage(this.ingr.ingredient.nume)">Detalii</button>
+    </h1>
+</div>

@@ -1,0 +1,26 @@
+<h1 class = "retete">
+    <br>
+    {{ret.reteta.nume}}
+    <h2>
+    <p> 
+    Categorie: 
+    {{ret.reteta.categorie}}
+    </p> 
+    <p> 
+    Grad dificultate: 
+    {{ret.reteta.grad_Dificultate}}
+    </p>
+    <p> 
+    Bucatarie: 
+    {{ret.reteta.bucatarie}}
+    </p>
+    <br>
+    <div>
+    <img src = "assets/img/clock.png" height = 17px width = 17px> 
+    Timp de Preparare:
+    </div>
+    {{ret.reteta.durata_minute}}
+    minute
+    </h2>
+    <button class = "button" (click)="goToRetetaPage(this.ret.reteta.id)">Vezi reteta</button>
+</h1>

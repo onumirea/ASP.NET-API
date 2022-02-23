@@ -1,0 +1,94 @@
+
+<br><br>
+<button class = "button1" onClick="document.getElementById('formularingr').scrollIntoView()"> Posteaza un ingredient! <img src = "assets/img/arrowDown.png" height = 15px width = 15px> </button>
+
+<form >
+    <div class = "text">
+        Vezi ce magazine vand ingredientul!
+      </div>
+    <div class="formular">
+        <br>
+        <br>
+      <label for="ingredient">Ingredient: </label>  
+      <input id="ingredient" type="text" [formControl]="ingredient">
+
+    </div>
+    <br>
+    <button type="submit" class="buton" routerLink="/view-ingredient/{{ingredient.value}}">Cauta</button>
+  </form>
+
+  <br><br>
+<div class="content" role="main">
+    <ul *ngFor = "let i of listaIngrediente">
+        <app-ingredient [ingr] = "i" ></app-ingredient>
+    </ul>
+</div>
+<div class = "container" id = 'formularingr'>
+  <h3>Posteaza un ingredient!</h3>
+<form
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="nume">Numele Ingredientului</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nume"
+            [(ngModel)]="form.nume"
+            required
+            #nume="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="nume.errors && f.submitted"
+          >
+            Nu poti posta un ingredient fara nume!
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="grad_dificultate">Unitate de masura:</label>
+            <input
+                type="text"
+                class="form-control"
+                name="unitate_masura"
+                [(ngModel)]="form.unitate_Masura"
+                required
+                #unitate_masura="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="unitate_masura.errors && f.submitted"
+            >
+                Nu poti posta un ingredient fara unitate de masura!
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="categorie">Categorie</label>
+            <input
+                type="text"
+                class="form-control"
+                name="categorie"
+                [(ngModel)]="form.categorie"
+                required
+                #categorie="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="categorie.errors && f.submitted"
+            >
+                Nu poti posta un ingredient fara sa ii specifici categoria!
+            </div>
+        </div>
+        <div class="form-group">
+          <button class="button">Submit</button>
+        </div>
+</form>
+</div>
+<br><br>

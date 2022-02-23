@@ -1,0 +1,25 @@
+<div class="container" *ngIf="currentUser; else loggedOut">
+    <div class = "pozaProfil">
+      <img src = "assets/img/pozaProfil.png" class = "pozaProf" height = 190px width = 190px>
+    </div>
+    <div class = "informatiiUser">
+      <header class="numeUser">
+        <br> <br>
+          <strong>{{ currentUser.unique_name }}'s</strong>  Profile
+      </header>
+      <p class = "gridComponent">
+        <strong>Email:</strong>
+        {{ currentUser.email }}
+      </p>
+      <p class = "gridComponent">
+      <strong>Role: {{currentUser.role}}</strong>
+      </p>
+      <br><br>
+      <button class = "button" (click)="this.token.signOut()"> Logout</button>
+    </div>
+  </div>
+  
+  
+  <ng-template #loggedOut>
+    Please login.
+  </ng-template>

@@ -1,0 +1,76 @@
+
+  .content {
+    
+    display: grid;
+    margin: 30px auto 32px;
+    padding: 0 100px 100px 0px;
+    width: 90%;
+    grid-template-columns: 550px 550px;
+    align-self: left;
+    
+  }
+  .formular{
+    width: 400px;
+    padding-left:100px;
+  }
+  
+  .text{
+    font-size: 30px;
+    padding-left:80px;
+     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(68, 38, 13);
+  }
+  .form-control{
+    background-color:rgb(240, 229, 216) ;
+  }
+  .buton{
+    margin-left:100px;
+    background-color: #8f705b;
+    border: none;
+    color: rgb(240, 229, 216);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  h2{
+    font-size: 20px;
+    margin: 0 100px;
+  }
+  h1{
+    font-size: 25px;
+  }
+  .btn btn-outline-primary{
+      background-color: brown;;
+  }
+  .form-control{
+    background-color:rgb(240, 229, 216) ;
+}
+.container{
+  background-color:rgb(224, 202, 172);
+  width:800px;
+  border:none;
+  left:10px;
+}
+h3{
+  font-size: 30px;
+  font-weight: bold;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(68, 38, 13);
+}
+.button1 {
+  background-color: #68574c;
+  border: none;
+  color: rgb(240, 229, 216);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  left:1300px;
+  top:630px;
+  position: fixed;
+
+}

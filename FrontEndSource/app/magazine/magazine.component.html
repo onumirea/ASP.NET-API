@@ -1,0 +1,234 @@
+
+<button class = "button1" onClick="document.getElementById('formularmag').scrollIntoView()"> Posteaza un magazin! <img src = "assets/img/arrowDown.png" height = 15px width = 15px> </button>
+
+<div class = "container">
+    <ul  *ngFor = "let i of listaMagazine">
+        <h1 class = "magazin"> 
+        <p>
+        Nume magazin:
+        {{i.nume}}
+        </p>
+            <h2>
+            <p>
+            Telefon:
+            {{i.telefon}}
+            </p>
+            <p>
+            Email:
+            {{i.email}}
+            </p>
+            <p>
+            Site:
+            {{i.site}}
+            <br>
+            Adresa:
+            </p>
+                <h3>
+                    <p>
+                        Judet:
+                        {{i.adresa.judet}}
+                        </p>
+                        <p>
+                        Oras:
+                        {{i.adresa.oras}}
+                        </p>
+                        <p>
+                        Strada:
+                        {{i.adresa.strada}}
+                        </p>
+                        <p>
+                        Numar:
+                        {{i.adresa.numar}}
+                        </p>
+                        <p>
+                        Cod postal:
+                        {{i.adresa.cod_Postal}}
+                        </p>
+                </h3>
+            </h2>
+        </h1>
+    </ul>
+</div>
+
+<div class = "containerform" id = 'formularmag'>
+    <h1>Posteaza un magazin!</h1>
+<form 
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="nume">Numele magazinului</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nume"
+            [(ngModel)]="form.nume"
+            required
+            #nume="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="nume.errors && f.submitted"
+          >
+            Nu poti posta un magazin fara nume!
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input
+                type="text"
+                class="form-control"
+                name="telefon"
+                [(ngModel)]="form.telefon"
+                required
+                #telefon="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="telefon.errors && f.submitted"
+            >
+                Nu poti posta un magazin fara numar de telefon!
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                type="text"
+                class="form-control"
+                name="email"
+                [(ngModel)]="form.email"
+                required
+                #email="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="email.errors && f.submitted"
+            >
+                Nu poti posta un magazin fara sa specifici mail-ul de contact!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="site">Site</label>
+            <input
+                type="text"
+                class="form-control"
+                name="site"
+                [(ngModel)]="form.site"
+                required
+                #site="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="site.errors && f.submitted"
+            >
+                Nu poti posta un magazin fara sa specifici site-ul lui!
+            </div>
+        </div>
+
+        <br>Adresa:<br><br>
+        <div class="form-group">
+            <label for="judet">Judet</label>
+            <input
+                type="text"
+                class="form-control"
+                name="judet"
+                [(ngModel)]="form.judet"
+                required
+                #judet="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="judet.errors && f.submitted"
+            >
+                Nu poti posta o adresa fara sa ii specifici judetul!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="oras">Oras</label>
+            <input
+                type="text"
+                class="form-control"
+                name="oras"
+                [(ngModel)]="form.oras"
+                required
+                #oras="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="oras.errors && f.submitted"
+            >
+                Nu poti posta o adresa fara sa ii specifici orasul!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="strada">Strada</label>
+            <input
+                type="text"
+                class="form-control"
+                name="strada"
+                [(ngModel)]="form.strada"
+                required
+                #strada="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="strada.errors && f.submitted"
+            >
+                Nu poti posta o adresa fara sa ii specifici strada!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="numar">Numar</label>
+            <input
+                type="number"
+                class="form-control"
+                name="numar"
+                [(ngModel)]="form.numar"
+                required
+                #numar="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="numar.errors && f.submitted"
+            >
+                Nu poti posta o adresa fara sa ii specifici numarul!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cod_Postal">Cod Postal</label>
+            <input
+                type="text"
+                class="form-control"
+                name="cod_Postal"
+                [(ngModel)]="form.cod_Postal"
+                required
+                #cod_Postal="ngModel"
+            />
+            <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="cod_Postal.errors && f.submitted"
+            >
+                Nu poti posta o adresa fara sa ii specifici codul postal!
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <button class="button">Submit</button>
+        </div>
+        <br><br>
+      </form>
+    </div>
+    

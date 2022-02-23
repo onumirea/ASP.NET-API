@@ -1,0 +1,29 @@
+
+  .content {
+    
+    display: flex;
+    margin: 30px auto 32px;
+    padding: 0 16px;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .retete{
+
+    width:1000px;
+    height: 500px;
+    border-radius: 10px; 
+    display: flex;
+    padding: 30px;
+    background-image: url("/textil2.jpeg");
+  }
+  h2{
+    font-size: 20px;
+    margin: 0 100px;
+  }
+  h1{
+    font-size: 25px;
+  }
+  .btn btn-outline-primary{
+      background-color: brown;;
+  }

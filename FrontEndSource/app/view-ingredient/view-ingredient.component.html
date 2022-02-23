@@ -1,0 +1,22 @@
+<h1 class = "ingredient">
+    <br>
+    {{ingr.ingredient.nume}}
+    <h2>
+    <p> 
+    Categorie: 
+    {{ingr.ingredient.categorie}}
+    </p> 
+    <p> 
+    Unitate de Masura: 
+    {{ingr.ingredient.unitate_Masura}}
+    </p>
+    <p>
+        Lista Magazine unde se vinde:
+    </p>
+    <li *ngFor = "let j of ingr.magazineleCareVandIngredientul">
+    {{j.magazin.nume}}
+    {{j.pret}}
+    RON
+    </li>
+    </h2>
+</h1>

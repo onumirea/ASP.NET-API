@@ -1,0 +1,123 @@
+<h1 class = "retete">
+    <br>
+    {{ret.reteta.nume}}
+    <h2>
+    <p> 
+    Categorie: 
+    {{ret.reteta.categorie}}
+    </p> 
+    <p> 
+    Grad dificultate: 
+    {{ret.reteta.grad_Dificultate}}
+    </p>
+    <p> 
+    Bucatarie: 
+    {{ret.reteta.bucatarie}}
+    </p> 
+    <p>
+    Mod de Preparare:
+    {{ret.reteta.mod_preparare}}
+    </p>
+    <p>
+    Timp de Preparare:
+    {{ret.reteta.durata_minute}}
+    minute
+    </p>
+    <p>
+        Lista ingrediente:
+    </p>
+    <li *ngFor = "let j of ret.ingredienteleRetetei">
+      {{j.ingredient.nume}} -> 
+      {{j.cantitate}}
+      {{j.ingredient.unitate_Masura}}
+
+    </li>
+    <br><br><br>
+    <div class = "stelute">
+      Rating mediu:
+      <div *ngFor="let i of range">
+        <img src = "assets/img/yellowStar.png" height = 30px width = 30px> 
+      </div>
+      <div *ngFor="let i of range1">
+        <img src = "assets/img/greyStar.png" height = 30px width = 30px> 
+      </div>
+    </div>
+    <br><br>
+    <a>
+       Posteaza o recenzie:
+    </a>
+
+
+    <form
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="continut">Continut</label>
+          <input
+            type="text"
+            class="form-control"
+            name="continut"
+            [(ngModel)]="form.continut"
+            required
+            #continut="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="continut.errors && f.submitted"
+          >
+            Nu poti posta un comentariu fara continut!
+          </div>
+        </div>
+
+        <br>
+        <div class="form-group">
+
+          <label for="rating">Rating:</label>
+          <input
+            type="number"
+            class="form-control"
+            name="rating"
+            [(ngModel)]="form.rating"
+            required
+            min=1
+            max=5
+            #rating="ngModel"
+            
+          />
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="rating.errors && f.submitted"
+          >
+          <div *ngIf="rating.errors['min']">
+            Rating-ul trebuie sa fie intre 1 si 5!
+          </div>
+          <div *ngIf="rating.errors['max']">
+            Rating-ul trebuie sa fie intre 1 si 5!
+          </div>
+          <div *ngIf="rating.errors['required']">Nu poti posta un comentariu fara rating!</div>
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="button">Submit</button>
+        </div>
+      </form>
+  
+
+
+
+    <br><br><br>
+    <p>
+        Recenzii:
+    </p>
+    <li *ngFor = "let j of rec">
+    {{j.rating}}
+    {{j.continut}}
+    </li>
+    </h2>
+</h1>
